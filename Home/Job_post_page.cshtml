@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/assets/css/job_post_page.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fill up the details below to post your job</h1>
+        <form id="jobForm">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" required>
+
+            <label for="duration">Duration</label>
+            <input type="text" id="duration" required>
+
+            <label for="salary">Salary</label>
+            <input type="text" id="salary" required>
+
+            <label for="predict">Predict</label>
+            <input type="text" id="predict" required>
+
+            <label for="jobDescription">Job Description</label>
+            <textarea id="jobDescription" rows="4" required></textarea>
+
+            <label for="technicalSkills">Technical Skills</label>
+            <textarea id="technicalSkills" rows="4" required></textarea>
+
+            <label for="languages">Languages</label>
+            <input type="text" id="languages" required>
+
+            <label for="quizTemplate">Choose Quiz Template</label>
+            <select id="quizTemplate" required>
+                <option value="">Choose</option>
+                <option value="template1">Quiz 1</option>
+                <option value="template2">Quiz 2</option>
+                <option value="template3">Quiz 3</option>
+            </select>
+
+            <button type="submit">POST NOW</button>
+        </form>
+    </div>
+    <script>document.getElementById('jobForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var jobTitle = document.getElementById('jobTitle').value;
+            var location = document.getElementById('location').value;
+          
+
+            if (!jobTitle || !location) {
+                
+                alert('Please fill in all the fields.');
+                return;
+            }
+
+           
+            alert('Form submitted successfully!');
+        });</script>
+</body>
+</html>
+
+
